@@ -1,0 +1,204 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+.btn {
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: solid 1px transparent;
+  border-radius: 5px;
+  padding: .5em 1em;
+}
+
+.uninstall-button {
+  color: white;
+  background-color: red;
+  transition: all .3s;
+  border: 2px solid transparent;
+}
+
+.uninstall-button_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.uninstall-button:hover {
+  background-color: #b30000;
+}
+
+.uninstall-button:active {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+}
+
+.cancel-button {
+  color: gray;
+  background-color: white;
+  border: 2px solid #cdcdcd;
+  transition: all .3s;
+}
+
+.cancel-button:hover {
+  color: dimgray;
+  border: 2px solid gray;
+}
+
+.cancel-button:active {
+  color: white;
+  background-color: #cdcdcd;
+}
+
+.close-button {
+  width: 24px;
+  height: 24px;
+  background: url("../assets/img/icon-popup-close.svg") center no-repeat;
+}
+
+.open-button_wrap {
+  padding-top: 30px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.popup {
+  width: 400px;
+  background-color: white;
+  padding: 3em;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+}
+
+.popup__text {
+  font-size: 1.6em;
+}
+
+.popup__img {
+  height: 105px;
+  background: url("../assets/img/icon-warning_notify-red.svg") center no-repeat;
+}
+
+.popup .close-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.popup__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup__buttons .cancel-button,
+.popup__buttons .uninstall-button {
+  flex-basis: 48%;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation: zoomIn .5s;
+  animation: zoomIn .5s;
+}
+
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  -webkit-animation: zoomOut .5s;
+  animation: zoomOut .5s;
+}
